@@ -1,6 +1,5 @@
 
 import { Router } from "express";
-import { request, response } from "express";
 
 const routes = Router();
 
