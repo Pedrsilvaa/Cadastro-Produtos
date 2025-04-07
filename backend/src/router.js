@@ -4,8 +4,6 @@ import { request, response } from "express";
 
 const routes = Router();
 
-routes.get("/", (request, response) => {
-    response.send('IT\'S THE GURI FROM THE GREMIO!');
-});
+routes.get("/", () => console.log('rota get'));
 
 export { routes };
