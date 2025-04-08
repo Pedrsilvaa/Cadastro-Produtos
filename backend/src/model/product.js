@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 const product = mongoose.model('Product', mongoose.Schema({
     name: {
         type: String, 
-        required: true 
+        required: true,
     },
     description: {
         type: String,

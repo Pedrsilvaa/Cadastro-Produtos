@@ -12,5 +12,6 @@ app.listen(API_PORT, (error) => {
         console.error('server wasn\'t started:\n', error);
         process.exit(1);
     }
+    
     console.log('server is started');
 });

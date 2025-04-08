@@ -1,14 +1,11 @@
 
 import ProductModel from '../model/product.js';
 
-const getAll = async () => await ProductModel.find();
+const getAll = async () => await ProductModel.find({});
 
 const getById = async (id) => await ProductModel.findById(id);
 
-const getAllByNameOrCategory = async (data) => await ProductModel.find({
-    name: data,
-    category: data
-});
+const getByName = async (name) => await ProductModel.find({ name });
 
 const create = async (data) => await ProductModel.create(data);
 
@@ -19,7 +16,7 @@ const remove = async (id) => await ProductModel.findByIdAndDelete(id);
 export default {
     getAll,
     getById,
-    getAllByNameOrCategory,
+    getByName,
     create,
     update,
     remove

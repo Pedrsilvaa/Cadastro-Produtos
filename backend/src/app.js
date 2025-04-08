@@ -7,17 +7,21 @@ import { routes } from './router.js';
 const app = express();
 
 app.use(morgan('dev'));
+
 app.use(express.urlencoded({ 
     extended: false 
 }));
+
 app.use(express.json());
+
 app.use(cors({
     origin: '*',
-    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept'],
     credentials: true,
     maxAge: 600
 }));
-app.use('/api',routes);
+
+app.use('/api', routes);
 
 export { app };
