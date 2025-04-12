@@ -9,7 +9,7 @@ const getByName = async (name) => await ProductModel.find({ name });
 
 const create = async (data) => await ProductModel.create(data);
 
-const update = async (id, data) => await ProductModel.findByIdAndUpdate(id, data, { new: true });
+const edit = async (id, data) => await ProductModel.findByIdAndUpdate(id, data, { new: true });
 
 const remove = async (id) => await ProductModel.findByIdAndDelete(id);
 
@@ -18,7 +18,7 @@ export default {
     getById,
     getByName,
     create,
-    update,
+    edit,
     remove
 };
 
